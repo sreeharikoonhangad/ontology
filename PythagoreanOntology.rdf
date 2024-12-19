@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology/"
+     xml:base="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:PythagoreanOntology="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#AdjacentSide"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Hypotenuse"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#OppositeSide"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Triangle"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isRelatedTo">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isRelatedTo"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Triangle"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#isRelatedTo"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Triangle"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#hasAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#hasAngle">
+        <rdfs:comment>Specifies the angles of a triangle in degrees.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#hasSideLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#hasSideLength">
+        <rdfs:comment>Specifies the length of a side of a triangle.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#AdjacentSide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#AdjacentSide">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#hasSideLength"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Hypotenuse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Hypotenuse">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#hasSideLength"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>The longest side of a right triangle opposite the right angle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#OppositeSide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#OppositeSide">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#hasSideLength"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#RightTriangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#RightTriangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Triangle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Triangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Triangle">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#hasAngle"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#SideA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#SideA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#AdjacentSide"/>
+        <PythagoreanOntology:isPartOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#TriangleABC"/>
+        <PythagoreanOntology:hasSideLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</PythagoreanOntology:hasSideLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#SideB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#SideB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#OppositeSide"/>
+        <PythagoreanOntology:isPartOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#TriangleABC"/>
+        <PythagoreanOntology:hasSideLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</PythagoreanOntology:hasSideLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#SideC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#SideC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#Hypotenuse"/>
+        <PythagoreanOntology:isPartOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#TriangleABC"/>
+        <PythagoreanOntology:hasSideLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</PythagoreanOntology:hasSideLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#TriangleABC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#TriangleABC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/PythagoreanOntology#RightTriangle"/>
+        <PythagoreanOntology:hasAngle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</PythagoreanOntology:hasAngle>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
